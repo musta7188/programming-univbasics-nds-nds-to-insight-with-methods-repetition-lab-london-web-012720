@@ -51,10 +51,10 @@ index = 0
 while index < source.length do
  loop_name = director_name[index]
 
- total += director_hash[lopp_name]
+ total += director_hash[loop_name]
 
  index += 1
-  
+
 end
 
 total
