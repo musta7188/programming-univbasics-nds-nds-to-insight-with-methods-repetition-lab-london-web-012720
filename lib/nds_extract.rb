@@ -38,25 +38,21 @@ list_director
 
 end
 
+
 def total_gross(source)
+  dir_to_earnings_hash = directors_totals(source)
+  dir_names = list_of_directors(source)
+  i = 0
 
-  total_gross = 0
+  total = 0
 
-  index1 = 0
-
-  while index1 < source.length do
-    index2 = 0
-
-    while index2 < source[index1][:movies].length do
-
-      total_gross += source[index1][:movies][index2][:worldwide_gross]
-
-      index2 += 1
-    end
-      index1 += 1
+  while i < dir_names.length do
+    dir_name = dir_names[i]
+    total += dir_to_earnings_hash[dir_name]
+    i += 1
   end
-return total_gross
 
+  total
 end
 
 # Should use methods:
