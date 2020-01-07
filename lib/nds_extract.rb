@@ -40,19 +40,24 @@ end
 
 
 def total_gross(source)
-  dir_to_earnings_hash = directors_totals(source)
-  dir_names = list_of_directors(source)
-  i = 0
 
-  total = 0
+director_hash = directors_totals(source)
+director_name = list_of_directors(source)
 
-  while i < dir_names.length do
-    dir_name = dir_names[i]
-    total += dir_to_earnings_hash[dir_name]
-    i += 1
-  end
+total = 0
 
-  total
+index = 0
+
+while index < source.length do
+ loop_name = director_name[index]
+
+ total += director_hash[lopp_name]
+
+ index += 1
+  
+end
+
+total
 end
 
 # Should use methods:
